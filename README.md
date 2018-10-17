@@ -2,7 +2,7 @@
 
 # Install
 
-The easiest is probably to use pip:
+use pip to install python package (https://github.com/SintefManufacturing/python-urx):
 ```
 pip install urx
 ```
