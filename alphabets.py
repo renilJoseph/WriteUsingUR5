@@ -9,7 +9,7 @@ def nextChar(initPosInMM, a, v):
     poseAngle[0]+=2
     rob.movej(convertToRad(poseAngle), acc=a, vel=v)
     rob.movel(initialPosInMM, a, v)
-    return pose
+    return rob.getl()
 
 def drawLine(valx, valy, valz, rob, a, v, comeback, backPos):
     poseinmm = rob.getl()
@@ -23,7 +23,7 @@ def drawLine(valx, valy, valz, rob, a, v, comeback, backPos):
         poseAngle[0]+=2
         rob.movej(convertToRad(poseAngle), acc=a, vel=v)
         rob.movel(backPos, acc=a, vel=v)
-    return pose #return current position after changing in degree
+    return rob.getl() #return current position after changing in degree
 
 def convertToRad(pos):
     pos = [x*((math.pi)/float(180)) for x in pos ]
