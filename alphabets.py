@@ -8,7 +8,7 @@ def nextChar(initPosInMM, a, v):
     poseAngle = convertToDegree(rob.getj())
     poseAngle[0]+=2
     rob.movej(convertToRad(poseAngle), acc=a, vel=v)
-    rob.movel(initialPosInMM, a, v)
+    rob.movel(initPosInMM, a, v)
     return rob.getl()
 
 def drawLine(valx, valy, valz, rob, a, v, comeback, backPos):
@@ -35,23 +35,23 @@ def convertToDegree(pos):
 
 def drawA(rob,a, v):
         # drawing A
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, True, finalPos)
         finalPos[2]-=0.2
         drawLine(0, -0.2, 0, rob, a, v, False, None)
         drawLine(0, 0, -0.4, rob, a, v, True, finalPos)
         drawLine(0, 0.2, 0, rob, a, v, False, None)
         drawLine(0, -0.2, -0.2, rob, a, v, False, None)
-        nextChar(initialPosInMM, a, v)  
+        nextChar(initPosInMM, a, v)  
 
 def drawB(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, True, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, None)
         drawLine(0, 0, -0.2, rob, a, v, False, finalPos)
@@ -59,166 +59,166 @@ def drawB(rob,a, v):
         drawLine(0, -0.2, 0, rob, a, v, False, None)
         drawLine(0, 0, -0.2, rob, a, v, False, finalPos)
         drawLine(0, 0.2, 0, rob, a, v, False, None)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def drawC(rob,a, v):      
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, False, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, True, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, backPos)
-        nextChar(initialPosInMM, a, v)   
+        nextChar(initPosInMM, a, v)   
 
 def drawD(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, False, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, None)
         drawLine(0, 0, 0.4, rob, a, v, False, finalPos)
         drawLine(0, 0.2, 0, rob, a, v, False, None)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def drawE(rob,a, v):       
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, False, finalPos)
         finalPos[2]-=0.2
         drawLine(0, -0.2, 0, rob, a, v, True, finalPos)
         finalPos[2]+=0.2
         drawLine(0, -0.2, 0, rob, a, v, True, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, backPos)
-        nextChar(initialPosInMM, a, v)   
+        nextChar(initPosInMM, a, v)   
 
 def drawF(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         finalPos[2]-=0.2
         drawLine(0, 0, -0.4, rob, a, v, True, finalPos)
         finalPos[2]+=0.2
         drawLine(0, -0.2, 0, rob, a, v, True, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, True, finalPos)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def drawG(rob,a, v):      
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, -0.2, 0, rob, a, v, True, finalPos)
         drawLine(0, 0, -0.4, rob, a, v, False, backPos)
         drawLine(0, 0, +0.2, rob, a, v, False, backPos)
         drawLine(0, 0.2, 0, rob, a, v, False, backPos)
-        nextChar(initialPosInMM, a, v)   
+        nextChar(initPosInMM, a, v)   
 
 def drawH(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         finalPos[2]-=0.2
         drawLine(0, 0, -0.4, rob, a, v, True, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, None)
         drawLine(0, 0, -0.2, rob, a, v, False, finalPos)
         drawLine(0, 0, -0.4, rob, a, v, False, None)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def drawI(rob,a, v):       
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         finalPos[1]-=0.1
         drawLine(0, 0, 0, rob, a, v, True, finalPos)
         drawLine(0, 0, -0.4, rob, a, v, False, backPos)
-        nextChar(initialPosInMM, a, v)   
+        nextChar(initPosInMM, a, v)   
 
 def drawJ(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         finalPos[1]-=0.2
         drawLine(0, -0.4, 0, rob, a, v, True, finalPos)
         drawLine(0, 0, -0.4, rob, a, v, False, None)
         drawLine(0, 0.2, 0, rob, a, v, False, finalPos)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def drawK(rob,a, v):       
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         finalPos[1]-=0.2
         drawLine(0, 0, -0.4, rob, a, v, True, finalPos)
         drawLine(0, -0.2, -0.2, rob, a, v, True, finalPos)
         drawLine(0, -0.2, 0.2, rob, a, v, False, backPos)
-        nextChar(initialPosInMM, a, v)   
+        nextChar(initPosInMM, a, v)   
 
 def drawL(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, False, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, None)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def drawM(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, True, finalPos)
         drawLine(0, -0.2, -0.2, rob, a, v, False, backPos)
         drawLine(0, -0.2, 0.2, rob, a, v, False, backPos)
         drawLine(0, 0, -0.4, rob, a, v, False, backPos)
-        nextChar(initialPosInMM, a, v)   
+        nextChar(initPosInMM, a, v)   
 
 def drawN(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, True, finalPos)
         drawLine(0, -0.4, -0.4, rob, a, v, False, None)
         drawLine(0, 0, 0.4, rob, a, v, False, finalPos)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def drawO(rob,a, v):      
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, True, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, backPos)
         drawLine(0, 0, 0.4, rob, a, v, False, backPos)
         drawLine(0, 0.2, 0, rob, a, v, False, backPos)
-        nextChar(initialPosInMM, a, v)   
+        nextChar(initPosInMM, a, v)   
 
 def drawP(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, True, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, None)
         drawLine(0, 0, -0.2, rob, a, v, False, finalPos)
         drawLine(0, 0.2, 0, rob, a, v, False, None)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def drawQ(rob,a, v):   
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, True, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, backPos)
         drawLine(0, 0, 0.4, rob, a, v, False, backPos)
@@ -226,106 +226,106 @@ def drawQ(rob,a, v):
         finalPos[2]-=0.2
         drawLine(0, 0.2, 0, rob, a, v, True, finalPos)
         drawLine(0, -0.3, -0.3, rob, a, v, False, finalPos)
-        nextChar(initialPosInMM, a, v)   
+        nextChar(initPosInMM, a, v)   
 
 def drawR(rob,a, v):     
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, True, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, backPos)
         drawLine(0, 0, -0.2, rob, a, v, False, backPos)
         drawLine(0, 0.2, 0, rob, a, v, False, backPos)
         drawLine(0, -0.2, -0.2, rob, a, v, False, None)
-        nextChar(initialPosInMM, a, v)   
+        nextChar(initPosInMM, a, v)   
 
 def drawS(rob,a, v):      
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.2, rob, a, v, False, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, backPos)
         drawLine(0, 0, -0.2, rob, a, v, False, backPos)
         drawLine(0, 0.2, 0, rob, a, v, True, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, None)
-        nextChar(initialPosInMM, a, v)   
+        nextChar(initPosInMM, a, v)   
 
 def drawT(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         finalPos[1]-=0.2
         drawLine(0, -0.4, 0, rob, a, v, True, finalPos)
         drawLine(0, 0, -0.4, rob, a, v, False, None)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def drawU(rob,a, v):      
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, 0, -0.4, rob, a, v, False, finalPos)
         drawLine(0, -0.2, 0, rob, a, v, False, backPos)
         drawLine(0, 0, 0.4, rob, a, v, False, backPos)
-        nextChar(initialPosInMM, a, v)   
+        nextChar(initPosInMM, a, v)   
 
 def drawV(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, -0.4, -0.4, rob, a, v, False, finalPos)
         drawLine(0, -0.2, 0.4, rob, a, v, False, None)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def drawW(rob,a, v):     
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, -0.4, -0.4, rob, a, v, True, finalPos)
         drawLine(0, -0.2, 0.2, rob, a, v, False, backPos)
         drawLine(0, -0.2, -0.2, rob, a, v, False, backPos)
         drawLine(0, -0.4, 0.4, rob, a, v, False, backPos)
-        nextChar(initialPosInMM, a, v)   
+        nextChar(initPosInMM, a, v)   
 
 def drawX(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         finalPos[2]-=0.4
         drawLine(0, -0.4, -0.4, rob, a, v, True, finalPos)
         drawLine(0, -0.4, 0.4, rob, a, v, False, None)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def drawY(rob,a, v):
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         finalPos[2]-=0.4
         drawLine(0, -0.2, -0.2, rob, a, v, False, finalPos)
         drawLine(0, 0, -0.2, rob, a, v, False, None)
         drawLine(0, 0, 0.2, rob, a, v, False, None)
         drawLine(0, -0.2, 0.2, rob, a, v, False, None)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def drawZ(rob,a, v):
         # drawing A
-        initlPosInMM = rob.getl()
+        initPosInMM = rob.getl()
         initPoseInDeg = convertToDegree(rob.getj())
         backPos = initPoseInDeg[:]
-        finalPos = initlPosInMM[:]
+        finalPos = initPosInMM[:]
         drawLine(0, -0.4, 0, rob, a, v, False, finalPos)
         drawLine(0, 0.4, -0.4, rob, a, v, False, None)
         drawLine(0, -0.4, 0, rob, a, v, True, finalPos)
-        nextChar(initialPosInMM, a, v)
+        nextChar(initPosInMM, a, v)
 
 def draw_(rob,a, v):
         # drawing A
-        initlPosInMM = rob.getl()
-        nextChar(initialPosInMM, a, v)
+        initPosInMM = rob.getl()
+        nextChar(initPosInMM, a, v)
