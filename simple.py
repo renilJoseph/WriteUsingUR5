@@ -17,9 +17,8 @@ if __name__ == "__main__":
     try:
         l = 0.05
         v = 1
-        a = 0.3
+        a = 0.5
 
-        
         for ch in sys.argv[1]:
             if ch==' ':
                 ch= '_'
